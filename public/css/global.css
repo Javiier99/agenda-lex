@@ -1,0 +1,151 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+html{
+
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url(../src/font/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+.hidden{
+    display: none !important;
+}
+
+:root{
+    /* Colores */
+    --color-azul-noche :  #0B1B2B; /* Menú lateral, login, tarjeta destacada */
+    --color-azul-profundo :  #16324F; /* Ítem activo y hover sobre oscuro */
+    --color-azul-primario :  #1E4F8C ; /* Botones, enlaces, serie «Ventas» */
+    --color-azul-primario-hover :  #173E70 ; /* Botones, enlaces, serie «Ventas» */
+    --color-dorado-acento :  #C9973F; /* Logo, iconos, serie «Alquileres». Nunca texto sobre blanco */
+    --color-dorado-acento-sobre-oscuro :  #E2B565; /* Logo, iconos, serie «Alquileres». Nunca texto sobre blanco */
+    --color-dorado-suave :  #F6EBD6 ; /* Avatares, etiquetas destacadas */
+    --color-dorado-suave-texto :  #7A5414 ; /* Avatares, etiquetas destacadas */
+    --color-fondo :  #F4F6F9 ; /* Fondo de la app */
+    --color-blanco-Superficie :  #fff; /* Tarjetas, tablas, cabecera */
+    --color-blanco: #fff;
+    --color-borde :  #E2E8F0; /* Bordes y divisores */
+    --color-textos :  #0F172A; /* Títulos y cifras */
+    --color-textos-secundario :  #475569; /* Etiquetas, descripciones */
+    --color-textos-tenue :  #64748B; /* Solo sobre blanco */
+    --color-negro :  #030303; 
+    --color-transparente: #ffffff00; 
+
+    /* Tipografía */
+    --size-header-h1: 3rem;
+    --size-header-h2: 2.5rem;
+    --size-header-h3: 2rem;
+    --size-parrafo: 1.6rem;
+
+    /* Familia Tipográfica */
+    --font-family-header: "Playfair Display";
+    --font-family-parrado: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+h1{
+    font-family: var(--font-family-header);
+    font-size: var(--size-header-h1);
+}
+
+h2{
+    font-family: var(--font-family-header);
+    font-size: var(--size-header-h2);
+}
+
+h3{
+    font-family: var(--font-family-header);
+    font-size: var(--size-header-h3);
+}
+
+p{
+    font-family: var(--font-family-parrado);
+    font-size: var(--size-parrafo);
+}
+
+label{
+    font-family: var(--font-family-parrado);
+    font-size: var(--size-parrafo);
+}
+
+input{
+    border-radius: 1rem;
+    border: var(--color-borde) 0.2rem solid;
+    padding: 0.8rem;
+}
+
+a{
+    font-family: var(--font-family-parrado);
+    font-size: var(--size-parrafo);
+    text-decoration: none;
+    color: var(--color-azul-primario);
+}
+a:hover{
+    font-family: var(--font-family-parrado);
+    font-size: var(--size-parrafo);
+    text-decoration: underline var(--color-azul-primario) 0.2rem;
+    transition: 0.5s;
+}
+
+.button-primario{
+    background-color: var(--color-azul-primario);
+    color: var(--color-blanco);
+    border: var(--color-azul-primario) solid 0.3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+}
+
+.button-primario:hover{
+    background-color: var(--color-azul-primario-hover);
+    color: var(--color-blanco);
+    border: var(--color-azul-primario-hover) solid 0.3rem;
+    border-radius: 1rem;
+    transition: 0.5s;
+}
+
+.button-secundario{
+    background-color: var(--color-transparente);
+    color: var(--color-azul-noche);
+    border: var(--color-borde) solid 0.3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+}
+
+.button-secundario:hover{
+    background-color: var(--color-azul-primario);
+    color: var(--color-blanco);
+    border: var(--color-azul-primario) solid 0.3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    transition: 0.5s;
+}
+
+.button-acento{
+    background-color: var(--color-dorado-acento);
+    color: var(--color-azul-noche);
+    border: var(--color-dorado-acento) solid 0.3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+}
+
+.button-acento:hover{
+    background-color: var(--color-transparente);
+    color: var(--color-azul-noche);
+    border: var(--color-dorado-acento) solid 0.3rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    transition: 0.5s;
+}

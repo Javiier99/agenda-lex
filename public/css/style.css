@@ -1,0 +1,173 @@
+
+
+/* Sección de inicio sesión */
+
+
+.index-main{
+    width: 100%;
+    background-color: var(--color-fondo);
+}
+
+/* Seccion 1 del index */
+/* Div izquierda */
+
+.index-main-section1{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 100vh;
+}
+
+.index-main-section1-div1, .index-main-section2-div2{
+    width: 50%;
+    background-color: var(--color-azul-noche);
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.index-main-section1-div1-div1, .index-main-section2-div2-div1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.index-main-section1-div1-div1-div, .index-main-section2-div2-div1-div{
+    background-color: var(--color-dorado-acento-sobre-oscuro);
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.index-main-section1-div1-div1--h2, .index-main-section2-div2-div1-div--h2{
+    color: var(--color-blanco);
+}
+
+
+.index-main-section1-div1-div2, .index-main-section2-div2-div{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.index-main-section1-div1-div2--h1, .index-main-section1-div1-div2--p, .index-main-section1-div1-div2-div--p, .index-main-section2-div2-div--h1, .index-main-section2-div2-div--p, .index-main-section2-div2-div-div--p{
+    color: var(--color-blanco);
+}
+
+.index-main-section1-div1-div2-div, .index-main-section2-div2-div-div{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.index-main-section1-div1-div2-div-div, .index-main-section2-div2-div-div-div{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+
+.index-main-section1-div1-div2-div-div-div, .index-main-section2-div2-div-div-div-div{
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-dorado-acento-sobre-oscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+
+/* Div derecha */
+
+.index-main-section1-div2{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-main-section1-div2-div{
+    background-color: var(--color-blanco-Superficie);
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 12px 32px rgba(11, 27, 43, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 60%;
+}
+
+.index-main-section1-div2-div-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.index-main-section1-div2-div-form-div1, .index-main-section1-div2-div-form-div2{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+.index-main-section1-div2-div-form-div3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+/* Seccio 2 del index */
+
+.index-main-section2{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 100vh;
+}
+
+.index-main-section2-div1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.index-main-section2-div-div{
+    background-color: var(--color-blanco-Superficie);
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 12px 32px rgba(11, 27, 43, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 60%;
+}
+
+.index-main-section2-div-div-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.index-main-section2-div-div-form-div1, .index-main-section2-div-div-form-div2, .index-main-section2-div-div-form-div3{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.index-main-section2-div-div-form-div4{
+    text-align: center;
+}
+

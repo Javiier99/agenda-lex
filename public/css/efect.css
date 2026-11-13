@@ -1,0 +1,37 @@
+
+
+.index-main-section1,
+.index-main-section2 {
+    overflow: hidden;
+}
+
+/* Paneles oscuros: se mueven */
+.index-main-section1-div1,
+.index-main-section2-div2 {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Formularios: se desvanecen */
+.index-main-section1-div2,
+.index-main-section2-div1 {
+    transition: opacity 0.3s ease;
+}
+
+/* Login → registro: panel de izquierda a derecha */
+.index-main-section1.saliendo .index-main-section1-div1 {
+    transform: translateX(100%);
+}
+
+/* Registro → login: panel de derecha a izquierda */
+.index-main-section2.saliendo .index-main-section2-div2 {
+    transform: translateX(-100%);
+}
+
+.index-main-section1.saliendo .index-main-section1-div2,
+.index-main-section1.entrando .index-main-section1-div2,
+.index-main-section2.saliendo .index-main-section2-div1,
+.index-main-section2.entrando .index-main-section2-div1 {
+    opacity: 0;
+}
