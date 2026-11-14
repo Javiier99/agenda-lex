@@ -8,7 +8,7 @@
         protected string $correo;
         protected int $telefono;
 
-        public function __construct($nombre, $apellidos, $correo, $telefono, $id = null){
+        public function __construct($id, $nombre, $apellidos, $correo, $telefono){
             $comprobaciones = $this->comprobarDatos($nombre, $apellidos, $correo, $telefono);
             if($comprobaciones == true){
                 $this->id = $id;

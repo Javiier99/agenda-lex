@@ -19,6 +19,10 @@ html{
     display: none !important;
 }
 
+.error{
+    color: red !important;
+}
+
 :root{
     /* Colores */
     --color-azul-noche :  #0B1B2B; /* Menú lateral, login, tarjeta destacada */

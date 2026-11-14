@@ -42,25 +42,25 @@ require_once __DIR__ . "/persona.php";
             // $stmt = $pdo -> prepare('INSERT INTO')
             // $nuevoCliente = new Usuarios();
             
-            // array_push($this->listaCliente, $lista);
+            // array_push($this->listaCliente, $lista); 
             
             
         }
 
     }
 
-    $abogado1 = new Abogados( "javier", "Delgado", "javier@gmail.com", 432432432, 1, []);
+    // $abogado1 = new Abogados( "javier", "Delgado", "javier@gmail.com", 432432432, 1, []);
 
-    $abogado1->setAñadirNuevoCliente("Tarea 1");
-    $abogado1->setAñadirNuevoCliente("Tarea 2");
-    echo "<br><br>";
-    $resulto = $abogado1->getObtenerListaTareas();
-    foreach($resulto as $loquesea){
-        echo $loquesea;
-        echo "<br><br>";
+    // $abogado1->setAñadirNuevoCliente("Tarea 1");
+    // $abogado1->setAñadirNuevoCliente("Tarea 2");
+    // echo "<br><br>";
+    // $resulto = $abogado1->getObtenerListaTareas();
+    // foreach($resulto as $loquesea){
+    //     echo $loquesea;
+    //     echo "<br><br>";
 
-    }
-    print_r($resulto);
+    // }
+    // print_r($resulto);
 
 
 

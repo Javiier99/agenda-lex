@@ -1,3 +1,31 @@
+
+<?php
+
+
+    session_start();
+
+    $correoUsuario = '';
+    $errorUsuario = '';
+
+    if(isset($_SESSION['intento-inicio-sesion'])){
+        $correoUsuario = $_SESSION['intento-inicio-sesion'][0];
+        $errorUsuario = $_SESSION['intento-inicio-sesion'][1];
+    }
+
+
+
+
+
+
+
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -52,19 +80,20 @@
                 <div class="index-main-section1-div2-div">
                     <h3>Inicia sesión en nuestra web</h3>
         
-                    <form action="" method="POST" class="index-main-section1-div2-div-form">
+                    <form action="./private/procesos/verificacion/verificar_inicio_sesion.php" method="POST" class="index-main-section1-div2-div-form">
                         <div class="index-main-section1-div2-div-form-div1">
                             <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" required>
+                            <input type="email" id="email" required name="email-inicio-sesion" value="<?php echo $correoUsuario; ?>">
                         </div>
                         <div class="index-main-section1-div2-div-form-div2">
                             <label for="pasword">Contraseña</label>
-                            <input type="password" id="password-inicio" required>
+                            <input type="password" id="password-inicio" required name="password-inicio-sesion">
                         </div>
                         <button type="submit" class="button-primario">Entrar al DashBoard</button>
                         <div class="index-main-section1-div2-div-form-div3">
                             <a href="">¿Has olvidado la contraseña?</a>
                             <a href="#" class="index-main-section1-div2-div-form-div3--registrarse-iniciar-sesion">Registrarse</a>
+                            <p class="error"> <?php if(isset($errorUsuario)){echo $errorUsuario; } ?> </p>
                         </div>
                     </form>
                 </div>
@@ -79,7 +108,7 @@
                     <h3>Registrate en nuestra web</h3>
                     <!-- Registro -->
         
-                    <form action="" method="POST" class="index-main-section2-div-div-form">
+                    <form action="./private/procesos/verificacion/verificar_verificar_registro_abogado.php" method="POST" class="index-main-section2-div-div-form">
                         <div class="index-main-section2-div-div-form-div1">
                             <label for="users">Nombre de Usuario</label>
                             <input type="text" id="users" placeholder="Users">
@@ -96,6 +125,7 @@
                         <button type="submit" class="button-primario">Registrarse</button>
                         <div class="index-main-section2-div-div-form-div4">
                             <a href="#" class="index-main-section1-div2-div-form-div3--registrarse-iniciar-sesion">Iniciar Sesión</a>
+                            
                         </div>
                     </form>
                 </div>
