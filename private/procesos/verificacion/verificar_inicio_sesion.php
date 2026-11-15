@@ -9,14 +9,12 @@
         $correoUsuario = (string) trim($_POST['email-inicio-sesion']);
         $passwordUsuario = (string) $_POST['password-inicio-sesion'];
 
-
-        $sql = "SELECT id_abogados, nombre_abogados, apellidos_abogados, correo_abogados, telefono_abogados, contraseña_abogados FROM abogados WHERE correo_abogados = :email AND contraseña_abogados = :password ";
+        $sql = "SELECT id_abogados, nombre_abogados, apellidos_abogados, correo_abogados, telefono_abogados, password_abogados FROM abogados WHERE correo_abogados = :email AND password_abogados = :password ";
         $stmt = $pdo->prepare($sql);
         $stmt->execute(['email' => $correoUsuario, 'password' => $passwordUsuario]);
         $abogado = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if($abogado == false){
-            echo "Es false";
 
             $_SESSION['intento-inicio-sesion'] = [$correoUsuario, "Error, el correo o la contraseña no es correcta"];
 

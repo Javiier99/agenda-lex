@@ -38,6 +38,6 @@
     <title>DashBoard de <?php echo $objetoAbogado->getNombre(); ?></title>
 </head>
 <body>
-    <a href="../../../private/class/abogados.php"></a>
+    
 </body>
 </html>

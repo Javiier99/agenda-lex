@@ -23,6 +23,10 @@ html{
     color: red !important;
 }
 
+.errorLi{
+    text-align: start;
+}
+
 :root{
     /* Colores */
     --color-azul-noche :  #0B1B2B; /* Menú lateral, login, tarjeta destacada */
@@ -70,7 +74,7 @@ h3{
     font-size: var(--size-header-h3);
 }
 
-p{
+p, li{
     font-family: var(--font-family-parrado);
     font-size: var(--size-parrafo);
 }

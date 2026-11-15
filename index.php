@@ -12,12 +12,11 @@
         $errorUsuario = $_SESSION['intento-inicio-sesion'][1];
     }
 
-
-
-
-
-
-
+    if(isset($_SESSION['iniciada'])){
+        // * Ocultado por el momento hasta terminar toda la página
+        // header('Location: ./public/pages/private/dashboard.php');
+        // exit();
+    }
 
 ?>
 
@@ -44,30 +43,30 @@
                     <div class="index-main-section1-div1-div1-div">
                         <img src="#" alt="Ca">
                     </div>
-                    <h2 class="index-main-section1-div1-div1--h2">Tu Inmobilaria</h2>
+                    <h2 class="index-main-section1-div1-div1--h2">DashBoard Abogados</h2>
                 </div>
                 
                 <div class="index-main-section1-div1-div2">
-                    <h1 class="index-main-section1-div1-div2--h1">Toda tu cartera inmobiliaria en un solo panel</h1>
-                    <p class="index-main-section1-div1-div2--p">Gestiona propiedades, clientes, visitas y contratos, y sigue tus ventas y alquileres en tiempo real.</p>
+                    <h1 class="index-main-section1-div1-div2--h1">Todo tu despacho en un solo panel</h1>
+                    <p class="index-main-section1-div1-div2--p">Gestiona clientes, expedientes y plazos desde un único lugar, sin hojas de cálculo ni notas sueltas.</p>
                     <div class="index-main-section1-div1-div2-div">
                         <div class="index-main-section1-div1-div2-div-div">
                             <div class="index-main-section1-div1-div2-div-div-div">
                                 <img src="#" alt="ca">
                             </div>
-                            <p class="index-main-section1-div1-div2-div--p">Fichas de inmuebles con fotos, precio y estado</p>
+                            <p class="index-main-section1-div1-div2-div--p">Clientes centralizados: fichas, contacto e historial siempre a mano</p>
                         </div>
                         <div class="index-main-section1-div1-div2-div-div">
                             <div class="index-main-section1-div1-div2-div-div-div">
                                 <img src="#" alt="ca">
                             </div>
-                            <p class="index-main-section1-div1-div2-div--p">Agenda de visitas por agente</p>
+                            <p class="index-main-section1-div1-div2-div--p">Tareas bajo control: plazos, vencimientos y prioridades de un vistazo</p>
                         </div>
                         <div class="index-main-section1-div1-div2-div-div">
                             <div class="index-main-section1-div1-div2-div-div-div">
                                 <img src="#" alt="ca">
                             </div>
-                            <p class="index-main-section1-div1-div2-div--p">Informes de operaciones y comisiones</p>
+                            <p class="index-main-section1-div1-div2-div--p">Trabajo organizado: filtra y encuentra cualquier asunto en segundos</p>
                         </div>
                     </div>
                 </div>
@@ -79,7 +78,7 @@
                 
                 <div class="index-main-section1-div2-div">
                     <h3>Inicia sesión en nuestra web</h3>
-        
+                    <p class="index-main-section1-div2-div--p"><?php if(isset($_SESSION['registro-abogado'])){ echo $_SESSION['registro-abogado']; unset($_SESSION['registro-abogado']); }?></p>
                     <form action="./private/procesos/verificacion/verificar_inicio_sesion.php" method="POST" class="index-main-section1-div2-div-form">
                         <div class="index-main-section1-div2-div-form-div1">
                             <label for="email">Correo Electrónico</label>
@@ -105,28 +104,40 @@
         <section class="index-main-section2 hidden">
             <div class="index-main-section2-div1">
                 <div class="index-main-section2-div-div">
-                    <h3>Registrate en nuestra web</h3>
+                    <h3>Crea tu cuenta</h3>
+                    <p>Empieza a gestionar tu despacho en minutos</p>
                     <!-- Registro -->
         
-                    <form action="./private/procesos/verificacion/verificar_verificar_registro_abogado.php" method="POST" class="index-main-section2-div-div-form">
+                    <form action="./private/procesos/verificacion/verificar_registro_abogado.php" method="POST" class="index-main-section2-div-div-form" id="registro-abogado">
                         <div class="index-main-section2-div-div-form-div1">
-                            <label for="users">Nombre de Usuario</label>
-                            <input type="text" id="users" placeholder="Users">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre-registro" placeholder="Nombre" require name="nombre-registros">
+                        </div>
+                        <div class="index-main-section2-div-div-form-div1">
+                            <label for="apellidos">Apellidos</label>
+                            <input type="text" id="apellidos-registro" placeholder="Apellidos" require name="apellidos-registros">
                         </div>
                         <div class="index-main-section2-div-div-form-div2">
-                            <label for="email-register">Correo Electrónico</label>
-                            <input type="email" id="email-register" placeholder="email@email.com">
+                            <label for="email-registro">Correo Electrónico</label>
+                            <input type="email" id="email-registro" placeholder="nombre@despacho.com" require name="email-registros">
+                        </div>
+                        <div class="index-main-section2-div-div-form-div2">
+                            <label for="telefono-registro">Télefono</label>
+                            <input type="number" id="telefono-registro" placeholder="Número de Telefono" require name="telefono-registro">
                         </div>
                         <div class="index-main-section2-div-div-form-div3">
-                            <label for="email-registrer">Contraseña</label>
-                            <input type="password" id="password-register" placeholder="Escribe tu contraseña">
-                            <input type="password" id="password-register-comprobar" placeholder="Repite tu contraseña">
+                            <label for="email-registro">Contraseña</label>
+                            <input type="password" id="password-registro" placeholder="Escribe tu contraseña" require name="password-registro">
+                            <input type="password" id="password-registro-comprobar" placeholder="Repite tu contraseña" require name="password-registro-comprobacion">
                         </div>
                         <button type="submit" class="button-primario">Registrarse</button>
                         <div class="index-main-section2-div-div-form-div4">
                             <a href="#" class="index-main-section1-div2-div-form-div3--registrarse-iniciar-sesion">Iniciar Sesión</a>
-                            
+                            <ol class="index-main-section2-div-div-form-div4-div">
+
+                            </ol>
                         </div>
+                        
                     </form>
                 </div>
                 
@@ -138,30 +149,30 @@
                         <img src="#" alt="cs">
                     </div>
                     
-                    <h2 class="index-main-section2-div2-div1-div--h2">Registrate en Tu Inmobilaria</h2>
+                    <h2 class="index-main-section2-div2-div1-div--h2">Dashboard Abogados</h2>
                 </div>
 
                 <div class="index-main-section2-div2-div">
-                    <h1 class="index-main-section2-div2-div--h1">Tendrás toda tu cartera inmobiliaria en un solo panel</h1>
-                    <p class="index-main-section2-div2-div--p">Gestiona propiedades, clientes, visitas y contratos, y sigue tus ventas y alquileres en tiempo real.</p>
+                    <h1 class="index-main-section2-div2-div--h1">Tu despacho, organizado desde el primer día</h1>
+                    <p class="index-main-section2-div2-div--p">Centraliza clientes, expedientes y plazos en un único panel y olvídate de las hojas de cálculo y las notas sueltas.</p>
                     <div class="index-main-section2-div2-div-div">
                         <div class="index-main-section2-div2-div-div-div">
                             <div class="index-main-section2-div2-div-div-div-div">
                                 <img src="#" alt="cs">
                             </div>
-                            <p class="index-main-section2-div2-div-div--p">Fichas de inmuebles con fotos, precio y estado</p>
+                            <p class="index-main-section2-div2-div-div--p">Clientes centralizados: fichas, contacto e historial siempre a mano</p>
                         </div>
                         <div class="index-main-section2-div2-div-div-div">
                             <div class="index-main-section2-div2-div-div-div-div">
                                 <img src="#" alt="cs">
                             </div>
-                            <p class="index-main-section2-div2-div-div--p">Agenda de visitas por agente</p>
+                            <p class="index-main-section2-div2-div-div--p">Plazos bajo control: vencimientos y prioridades de un vistazo</p>
                         </div>
                         <div class="index-main-section2-div2-div-div-div">
                             <div class="index-main-section2-div2-div-div-div-div">
                                 <img src="#" alt="cs">
                             </div>
-                            <p class="index-main-section2-div2-div-div--p">Informes de operaciones y comisiones</p>
+                            <p class="index-main-section2-div2-div-div--p">Expedientes ordenados: encuentra cualquier asunto en segundos</p>
                         </div>
                     </div>
                 </div>
