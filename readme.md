@@ -28,7 +28,7 @@ Está construida con **PHP orientado a objetos y MySQL**, partiendo de un **diag
 
 | Inicio de sesión | Registro |
 | --- | --- |
-| ![Pantalla de inicio de sesión](public/src/img/img-proyecto/img-resultado/Index_real_inicio_sesion.png) | ![Pantalla de registro](public/src/img/img-proyecto/img-resultado/index_registrarse.png) |
+| ![Pantalla de inicio de sesión](doc/img-proyecto/img-resultado/Index_real_inicio_sesion.png) | ![Pantalla de registro](doc/img-proyecto/img-resultado/index_registrarse.png) |
 
 ### 🎨 Diseño previsto
 
@@ -36,9 +36,9 @@ Prototipos de las pantallas que faltan por desarrollar:
 
 | Panel principal | Clientes |
 | --- | --- |
-| ![Prototipo del panel](public/src/img/img-proyecto/img-idea/dashboard.png) | ![Prototipo de clientes](public/src/img/img-proyecto/img-idea/pageClientes.png) |
+| ![Prototipo del panel](doc/img-proyecto/img-idea/dashboard.png) | ![Prototipo de clientes](doc/img-proyecto/img-idea/pageClientes.png) |
 | **Tareas** | **Inicio de sesión** |
-| ![Prototipo de tareas](public/src/img/img-proyecto/img-idea/page_tareas.png) | ![Prototipo del inicio de sesión](public/src/img/img-proyecto/img-idea/inicio.png) |
+| ![Prototipo de tareas](doc/img-proyecto/img-idea/page_tareas.png) | ![Prototipo del inicio de sesión](doc/img-proyecto/img-idea/inicio.png) |
 
 ---
 
@@ -273,9 +273,10 @@ agenda-lex/
 ├── public/
 │   ├── css/
 │   ├── js/                    # Validación y transiciones del acceso
-│   ├── pages/                 # Panel, clientes y tareas
-│   └── src/img/img-proyecto/  # Prototipos y capturas
-├── doc/                       # Diagrama de clases UML
+│   └── pages/                 # Panel, clientes y tareas
+├── doc/
+│   ├── img-proyecto/          # Prototipos (img-idea) y capturas reales (img-resultado)
+│   └── uml-clases.png         # Diagrama de clases UML
 └── bdAgendaLex.sql            # Estructura de la base de datos
 ```
 
