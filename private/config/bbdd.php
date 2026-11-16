@@ -24,7 +24,7 @@
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // Muestra los errores
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, // Devolverá los datos como un array asociativo
         ]);
-        
+        echo "Coneccion establecida";
     } catch (PDOException $e){
         die("Error al conectar la base de datos" . $e->getMessage());
     }

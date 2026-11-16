@@ -95,6 +95,7 @@ a{
     font-size: var(--size-parrafo);
     text-decoration: none;
     color: var(--color-azul-primario);
+    cursor: pointer;
 }
 a:hover{
     font-family: var(--font-family-parrado);
@@ -157,3 +158,5 @@ a:hover{
     padding: 0.5rem 2rem;
     transition: 0.5s;
 }
+
+
